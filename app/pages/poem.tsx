@@ -1,10 +1,8 @@
-import { Suspense } from "react"
 import { Link, BlitzPage, useMutation, Routes } from "blitz"
-import Layout from "app/core/layouts/Layout"
-import { useCurrentUser } from "app/core/hooks/useCurrentUser"
-import logout from "app/auth/mutations/logout"
 
-const Home: BlitzPage = () => {
+import Layout from "../core/layouts/Layout"
+
+const Poem: BlitzPage = () => {
   return (
     <div className="poem">
       <header>
@@ -94,9 +92,7 @@ const Home: BlitzPage = () => {
           但这些都不是我首要渴求的，我想要的是你的拥抱。
         </div>
       </main>
-      <footer>
-        <p className="text">Build with Love By Gary & Iris</p>
-      </footer>
+      <footer></footer>
 
       <style jsx global>{`
         html,
@@ -177,16 +173,12 @@ const Home: BlitzPage = () => {
           align-items: center;
           background-color: #000;
         }
-        footer .text {
-          color: white;
-          text-align: center;
-        }
       `}</style>
     </div>
   )
 }
 
-Home.suppressFirstRenderFlicker = true
-Home.getLayout = (page) => <Layout title="Home">{page}</Layout>
+Poem.suppressFirstRenderFlicker = true
+Poem.getLayout = (page) => <Layout title="Home">{page}</Layout>
 
-export default Home
+export default Poem

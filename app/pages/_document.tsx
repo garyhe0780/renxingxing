@@ -1,16 +1,20 @@
-import {Document, Html, DocumentHead, Main, BlitzScript /*DocumentContext*/} from 'blitz'
+import { Document, Link, Html, DocumentHead, Main, BlitzScript /*DocumentContext*/ } from "blitz"
 
 class MyDocument extends Document {
-  // Only uncomment if you need to customize this behaviour
-  // static async getInitialProps(ctx: DocumentContext) {
-  //   const initialProps = await Document.getInitialProps(ctx)
-  //   return {...initialProps}
-  // }
-
   render() {
     return (
       <Html lang="en">
-        <DocumentHead />
+        <DocumentHead>
+          <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+            crossOrigin="crossOrigin"
+          ></link>
+          <link
+            href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap"
+            rel="stylesheet"
+          ></link>
+        </DocumentHead>
         <body>
           <Main />
           <BlitzScript />
